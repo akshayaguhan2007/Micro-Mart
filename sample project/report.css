@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'poppins',sans-serif;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+.eateazy{
+    font-size: 3em;
+    color:  black;
+    user-select: none;
+    font-weight: 500;
+}
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: #080606;
+    text-decoration: none;
+    font-weight: 700;
+    margin-left: 40px;
+}
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: magenta;
+    border-radius: 5px;
+    transform-origin:right ;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+.navigation a:hover:after{
+    transform-origin:left;
+    transform: scaleX(1);
+}
+
+.navigation .btnLogin-popup{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid magenta;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color:  magenta;
+    font-weight: 500;
+    margin-left: 40px;
+}
+.navigation .btnLogin-popup:hover{
+    background: linear-gradient(45deg, #df4881,#c430d7);
+    color: rgb(255, 253, 253);
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: ghost white;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    width: 60%;
+    margin: 30px auto;
+    margin-top: 150px;
+    background-color: white;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .container h2 {
+    text-align: center;
+    color: #333;
+  }
+
+  label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+  }
+
+  
+  input[type="text"],
+  input[type="email"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    }
+
+  textarea {
+    resize: vertical;
+    height: 100px;
+  }
+
+  .rating {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .rating input {
+    display: none;
+  }
+
+  .rating label {
+    font-size: 1.5em;
+    color: #ddd;
+    cursor: pointer;
+  }
+
+  .rating input:checked ~ label {
+    color: gold;
+  }
+
+  button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background-image: linear-gradient(45deg, #df4881,#c430d7);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: pink;
+  }
+
+  .confirmation {
+    display: none;
+    text-align: center;
+    color: pink;
+    font-weight: bold;
+    margin-top: 15px;
+  }

@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Micro Mart</title>
+        <link rel="icon" href="">
+        <link rel="stylesheet" href="C:\Code\sample project\report.css">
+    </head>
+<body background="C:\Code\sample project\back-image.png">
+  <header>
+    <h2 class="eateazy">MICRO MART</h2>
+    <nav class="navigation">
+        <a href="C:\Code\sample project\HP.html">HOME</a>
+        <a href="">ABOUT</a>
+        <a href="C:\Code\sample project\report.html">REPORT</a>
+        <a href="">PRODUCT</a>
+     <button class="btnlogin-popup">LOGIN</button>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>We Value Your Feedback!</h2>
+    <form id="feedbackForm" onsubmit="submitFeedback(event)">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required>
+
+      
+
+      <label for="rating">Rating:</label>
+      <div class="rating">
+        <input type="radio" id="star5" name="rating" value="5" required>
+        <label for="star5">&#9733;</label>
+        <input type="radio" id="star4" name="rating" value="4">
+        <label for="star4">&#9733;</label>
+        <input type="radio" id="star3" name="rating" value="3">
+        <label for="star3">&#9733;</label>
+        <input type="radio" id="star2" name="rating" value="2">
+        <label for="star2">&#9733;</label>
+        <input type="radio" id="star1" name="rating" value="1">
+        <label for="star1">&#9733;</label>
+      </div>
+
+      <label for="comments">Report:</label>
+      <textarea id="comments" name="comments" placeholder="Your feedback"></textarea><br>
+	  <h3>Suggestions:</h3><br>
+	  <input type="radio" id="opt1" name="option" value="opt1">Security and privacy<br>
+       <input type="radio" id="opt2" name="option" value="opt2">Technical issues<br>
+       <input type="radio" id="opt3" name="option" value="opt3">Limited funtionality<br>
+	   	  <input type="radio" id="opt1" name="option" value="opt1">Online Banking<br>
+       <input type="radio" id="opt2" name="option" value="opt2">Customer service issues<br>
+       <input type="radio" id="opt3" name="option" value="opt3">Others<br>
+
+      <button type="submit">Submit Feedback</button>
+    </form>
+    <div class="confirmation" id="confirmationMessage">Thank you for your feedback!</div>
+  </div>
+
+  <script>
+    
+    function submitFeedback(event) {
+      event.preventDefault();
+
+      
+      document.write('confirmationMessage').style.display = 'block';
+
+      
+      document.write('feedbackForm').reset();
+
+      
+      setTimeout(() => {
+        document.write('confirmationMessage').style.display = 'none';
+      }, 3000);
+    }
+  </script>
+</body>
+</html>
